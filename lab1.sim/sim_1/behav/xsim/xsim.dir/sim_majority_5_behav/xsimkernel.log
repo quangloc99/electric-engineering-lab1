@@ -1,0 +1,4 @@
+Running: xsim.dir/sim_majority_5_behav/xsimk -simmode gui -wdb sim_majority_5_behav.wdb -simrunnum 0 -socket 54327
+Design successfully loaded
+Design Loading Memory Usage: 43056 KB (Peak: 43056 KB)
+Design Loading CPU Usage: 60 ms

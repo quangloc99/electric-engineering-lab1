@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage[a4paper, margin=1in]{geometry}
+
+%Russian-specific packages
+%--------------------------------------
+\usepackage[tuenc]{fontspec}%for lualatex case
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{indentfirst}
+% \usepackage[english,russian]{babel} 
+\setsansfont{CMU Sans Serif}%{Arial}
+\setmainfont{CMU Serif}%{Times New Roman}
+\setmonofont{CMU Typewriter Text}%{Consolas}
+
+\usepackage{tikz}
+\usepackage{minted}
+\usepackage{algoflowchart}      % <-- this is a local package, and I am the author
+\usepackage{graphicx}
+\usemintedstyle{borland}
+
+\renewcommand{\familydefault}{\rmdefault}
+\def\requiredField#1{\textcolor{red}{#1}}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center} «Национальный исследовательский университет ИТМО» \end{center}
+
+    \vfill
+    \begin{center}
+        
+        \textbf{\huge
+            Лабораторная работа №1 по дисциплину
+            "Функциональная схемотехника"
+        } \\
+        \medskip
+        Введение в проектирование цифровых интегральных схем
+
+
+    \end{center}
+
+    \vfill
+
+    \begin{flushright}
+        Выполнил: Чан Куанг Лок\\
+        Группа: P33011
+    \end{flushright}
+
+    \begin{center}
+        Санкт-Петербург\\ 2021 г
+    \end{center}
+\end{titlepage}
+
+\section{Цель работы}
+\begin{enumerate}
+    \item Получить базовые знания о принципах построения цифровых интегральных
+схем с использованием технологии КМОП.
+    \item Получить навыки описания схем базовых операционных элементов (БОЭ) комбинационного типа на вентильном уровне с использованием языка описания аппаратуры Verilog HDL.
+\end{enumerate}
+
+\section{Описание задания}
+No варианта: 3
+
+\begin{tabular}{ | c | c |}
+    \hline
+        Логический базис & БОЭ \\
+    \hline
+        NOR &
+        Схема мажоритарного контроля с 5-ю входами \\
+    \hline
+\end{tabular}
+
+\section{Выполнение}
+\subsection{Ссылка на github}
+TODO
+\subsection{Код разработанного модуля БОЭ}
+\inputminted[fontsize=\footnotesize, linenos]{verilog}{lab1.srcs/sources_1/new/majority_5.v}
+
+\subsection{Код разработанного тестового окружения БОЭ}
+\inputminted[fontsize=\footnotesize, linenos]{verilog}{lab1.srcs/sim_1/new/sim_majority_5.v}
+
+
+\subsection{Временный диаграмм}
+\includegraphics[width=\linewidth]{./time-diagram.png}
+
+
+\section{Вывод}
+При выполнению лабораторной работы, я познакомился с языком Verilog: его основным синтаксисом, типами, основными операциями и некоторыми базовыми операторами управления. Код, который мне нужно написать, прост и не слишком много. Большую часть времени в лаборатории я тратил на настройку окружения и схемотехнику. Схема стала сложнее, так как мне разрешено использовать только 1 универсальный логический базис. На мой взгляд, схема получается немного сложной. После лабораторной работы я понял основы языка и причину, по которой мы используем только логический базис вместо других.
+
+\end{document}
+
+% listing code with:
+%    \inputminted[fontsize=\footnotesize]{lang}{realtive-or-absolute-dir}  
+
+% insert image
+%    \includegraphics[width=3cm, height=4cm]{img_path}
+% vim: wrap
+
