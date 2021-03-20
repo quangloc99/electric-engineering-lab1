@@ -71,7 +71,7 @@ No варианта: 3
 
 \section{Выполнение}
 \subsection{Ссылка на github}
-TODO
+\verb!https://github.com/quangloc99/electric-engineering-lab1!
 \subsection{Код разработанного модуля БОЭ}
 \inputminted[fontsize=\footnotesize, linenos]{verilog}{lab1.srcs/sources_1/new/majority_5.v}
 
